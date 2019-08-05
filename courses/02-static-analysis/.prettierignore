@@ -1,0 +1,7 @@
+node_modules
+coverage
+dist
+package.json
+package-lock.json
+
+# etc. what ever makes sense for your project
