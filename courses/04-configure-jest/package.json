@@ -1,0 +1,52 @@
+{
+  "name": "04-configure-jest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-serve",
+    "build": "webpack --mode=production",
+    "postbuild": "cp ./public/index.html ./dist/index.html",
+    "start": "serve --no-clipboard --listen 8080 dist",
+    "lint": "eslint .",
+    "format": "prettier \"**/*.js\" --write",
+    "validate": "npm run lint && npm run test && npm run build",
+    "setup": "npm run setup && npm run validate",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "7.5.5",
+    "@babel/plugin-proposal-object-rest-spread": "7.5.5",
+    "@babel/plugin-syntax-dynamic-import": "7.2.0",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "@testing-library/react": "^8.0.8",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-emotion": "^10.0.15",
+    "css-loader": "^3.2.0",
+    "eslint": "^6.1.0",
+    "eslint-config-kentcdodds": "^14.3.4",
+    "eslint-plugin-jest": "^22.14.1",
+    "file-loader": "^4.1.0",
+    "jest": "^24.8.0",
+    "prettier": "^1.18.2",
+    "prop-types": "^15.7.2",
+    "serve": "^11.1.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-serve": "^3.1.1"
+  },
+  "dependencies": {
+    "emotion": "^10.0.14",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-emotion": "^10.0.0",
+    "react-loadable": "^5.5.0",
+    "react-point": "^3.0.1"
+  }
+}
